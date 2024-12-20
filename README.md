@@ -46,7 +46,7 @@ The Next.js application will be available at [http://localhost:3000](http://loca
 
 1. Build the Spring Boot project:
     ```bash
-    mvn clean package
+    gradlew build
     ```
 
 2. Build the Docker image for the backend:
