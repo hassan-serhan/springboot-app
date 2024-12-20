@@ -126,15 +126,28 @@ Updates the item with the specified ID from the database.
   "description": "Updated Description"
 }
 ```
-
----
-
-# Delete an Item
+# DELETE an Item
 
 ## Method: DELETE  
-**URL**: `http://localhost:8080/api/items/{id}`  
-  
+**URL**: `http://localhost:8080/api/items/{id}`
+
 ### Description:  
-Deletes the item with the specified ID from the database.  
+Deletes the item with the specified ID from the database. 
   
+---
+
+# Error Handling
+
+#### 1. If the `id` parameter in the **PUT**, **GET** or **DELETE** requests is not found (e.g., `id=1`), the response status will be **404 Not Found** with the message:
+```json
+{
+  "Item with ID 1 not found"
+}
 ```
+#### 2. For the **POST** request, if the name field is not provided or is empty, the response status will be **400 Bad Request** with the message:
+```json
+{
+  "Name is required and cannot be empty."
+}
+```
+
