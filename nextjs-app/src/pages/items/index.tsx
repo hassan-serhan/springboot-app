@@ -6,7 +6,7 @@ import router from 'next/router';
 import Navbar from '../Navbar';
 import "../../app/globals.css";
 export default function HomePage() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<any[]>([]);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -31,10 +31,10 @@ export default function HomePage() {
       <h2 className="text-center mb-4">Items</h2>
       { error && <p className="text-danger text-center">{error}</p>}
       <ul className="list-group">
-        {items.map((item: any) => (
-            <Link href={`/items/${item.id}`} className='nav-link'>
-              <li key={item.id} className="list-group-item hover-blue">{item.name}</li>
-            </Link>
+        {Array.isArray(items) && items.map((item: any) => (
+          <Link href={`/items/${item.id}`} className="nav-link" key={item.id}>
+            <li className="list-group-item hover-blue">{item.name}</li>
+          </Link>
         ))}
       </ul>
     </div>
