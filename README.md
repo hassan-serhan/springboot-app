@@ -1,8 +1,6 @@
-# springboot-app
-
 # Spring Boot and Next.js Dockerized Application
 
-This repository demonstrates a simple setup for a Spring Boot backend and a Next.js frontend, both containerized using Docker.
+This file demonstrates a simple setup for a Spring Boot backend and a Next.js frontend, both containerized using Docker.
 
 ---
 
