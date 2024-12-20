@@ -58,6 +58,7 @@ The Spring Boot API will be available at [http://localhost:8080/api](http://loca
   
 ### Description:  
 Fetches all items from the database.  
+response status: `200 OK`
   
 ### Example Response:  
 ```json
@@ -84,6 +85,7 @@ Fetches all items from the database.
   
 ### Description:  
 Get the item with the specified ID from the database.  
+response status: `200 OK`
   
 ### Example Response:  
 ```json
@@ -99,7 +101,8 @@ Get the item with the specified ID from the database.
 **URL**: `http://localhost:8080/api/items`
 
 ### Description:  
-Add new item to the database. 
+Add new item to the database.   
+response status: `201 Created`
   
 ### Body (raw JSON):  
 ```json
@@ -117,7 +120,8 @@ Add new item to the database.
 **URL**: `http://localhost:8080/api/items/{id}`
 
 ### Description:  
-Updates the item with the specified ID from the database. 
+Updates the item with the specified ID from the database.   
+response status: `204 No Content`
   
 ### Body (raw JSON):  
 ```json
@@ -132,7 +136,8 @@ Updates the item with the specified ID from the database.
 **URL**: `http://localhost:8080/api/items/{id}`
 
 ### Description:  
-Deletes the item with the specified ID from the database. 
+Deletes the item with the specified ID from the database.   
+response status: `204 No Content`
   
 ---
 
